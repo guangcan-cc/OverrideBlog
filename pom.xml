@@ -9,6 +9,7 @@
     <module>OverrideBlog-common</module>
     <module>OverrideBlog-web</module>
     <module>OverrideBlog-service</module>
+    <module>OverrideBlog-user</module>
   </modules>
   <name>${project.artifactId}</name>
   <url>http://maven.apache.org</url>
@@ -166,6 +167,13 @@
       <groupId>javax.servlet.jsp</groupId>
       <artifactId>jsp-api</artifactId>
       <version>${jsp-api.version}</version>
+    </dependency>
+
+    <!-- common lang包 -->
+    <dependency>
+      <groupId>commons-lang</groupId>
+      <artifactId>commons-lang</artifactId>
+      <version>2.4</version>
     </dependency>
 
   </dependencies>
