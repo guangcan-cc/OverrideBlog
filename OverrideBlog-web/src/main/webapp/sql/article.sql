@@ -1,0 +1,11 @@
+USE override_blog;
+CREATE TABLE override_blog.tb_article (
+  ID INT(10) AUTO_INCREMENT COMMENT '自增长主键',
+  TITLE VARCHAR(100) COMMENT '文章标题',
+  CONTENT TEXT COMMENT '文章内容',
+  AUTHOR INT(10) COMMENT '作者,关联用户表tb_user',
+  CREATE_TIME DATETIME COMMENT '创建时间',
+  ARITICLE_STATUS TINYINT COMMENT '文章状态:0:草稿,1:发表,2:关闭',
+  STATUS TINYINT COMMENT '系统状态:0:删除,1:正常',
+  PRIMARY KEY (ID)
+)ENGINE=InnoDB DEFAULT CHARSET = utf8;

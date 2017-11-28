@@ -9,6 +9,8 @@
     <module>OverrideBlog-common</module>
     <module>OverrideBlog-web</module>
     <module>OverrideBlog-service</module>
+    <module>OverrideBlog-user</module>
+    <module>OverrideBlog-article</module>
   </modules>
   <name>${project.artifactId}</name>
   <url>http://maven.apache.org</url>
