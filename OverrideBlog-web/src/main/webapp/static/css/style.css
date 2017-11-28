@@ -1,0 +1,15 @@
+.topnav{
+    height:30px;
+    line-height:30px;
+    background:url(../images/bg_topnav.gif) repeat-x 0 0;
+    border-bottom:1px solid #EBEBEB;
+    font-size:12px
+}
+
+.topbar{background-color: #ECECEC;
+    border-bottom:1px solid #ddd
+}
+
+.topbar a{ margin-right:5px}
+
+.r_nav{ display:inline-block; color:#999}
