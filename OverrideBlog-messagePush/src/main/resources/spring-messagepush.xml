@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:property-placeholder location="classpath:message-push.properties"/>
+
+    <bean class="cn.jpush.api.JPushClient" name="jPushClient">
+        <constructor-arg type="java.lang.String" value="${jPush.masterSecret}"/>
+        <constructor-arg type="java.lang.String" value="${jPush.appKey}"/>
+    </bean>
+
+    <bean class="com.tencent.xinge.XingeApp" name="xingeAppIOS">
+        <constructor-arg type="java.lang.Long" value="${xinge.ios.accessId}"/>
+        <constructor-arg type="java.lang.String" value="${xinge.ios.secretKey}"/>
+    </bean>
+
+    <bean class="com.tencent.xinge.XingeApp" name="xingeAppAndroid">
+        <constructor-arg type="java.lang.Long" value="${xinge.android.accessId}"/>
+        <constructor-arg type="java.lang.String" value="${xinge.android.secretKey}"/>
+    </bean>
+
+
+</beans>
