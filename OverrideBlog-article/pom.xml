@@ -13,4 +13,11 @@
     <build>
         <finalName>OverrideBlog-article</finalName>
     </build>
+    <dependencies>
+        <dependency>
+            <groupId>com.blog</groupId>
+            <artifactId>OverrideBlog-messagePush</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 </project>
