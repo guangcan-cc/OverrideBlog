@@ -1,7 +1,9 @@
-package com.blog.util;
+package com.blog.service;
 
 import cn.jpush.api.push.model.PushPayload;
 import org.apache.log4j.Logger;
+import org.aspectj.lang.JoinPoint;
+import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Pointcut;
 import org.springframework.stereotype.Component;
@@ -14,8 +16,8 @@ import org.springframework.stereotype.Component;
  */
 @Aspect
 @Component
-public abstract class JPushAspect {
-    private static Logger logger = Logger.getLogger(JPushAspect.class);
+public abstract class AbstractJPushAspect {
+    private static Logger logger = Logger.getLogger(AbstractJPushAspect.class);
 
     @Pointcut(value = "execution(protected cn.jpush.api.push.model.PushPayload com.blog.service.JPushService.buildPushLoad(builder))")
     public void buildPushLoadAspect(PushPayload.Builder builder) {
@@ -23,6 +25,11 @@ public abstract class JPushAspect {
 
     @Pointcut(value = "execution(protected cn.jpush.api.push.model.PushPayload com.blog.service.JPushService.pushMessage(builder,pushPayload))")
     public void pushMessageAspect(PushPayload.Builder builder, PushPayload pushPayload) {
+
+    }
+
+    @Pointcut(value = "execution(protected cn.jpush.api.push.model.PushPayload com.blog.service.JPushService.pushMesageByjPush(builder) )")
+    public void pushMessageByJPushAspect(PushPayload.Builder builder) {
 
     }
 }
