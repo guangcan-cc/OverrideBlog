@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript" src="jsps/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/ctchan.js"></script>
+    <link rel="stylesheet" href="css/ctchan.css">
+</head>
+<body>
+<div>
+    <div>
+        <label for="appId">appId:</label><input id="appId" value="wx7d1281dcff7acf45">
+    </div>
+    <div>
+        <label for="appSecret">appSecret:</label> <input id="appSecret" value="05394dc86606d35823c2983531be4ee3">
+    </div>
+    <button id="authorize">获取授权</button>
+</div>
+
+<div id="show">
+    <button data-url="http://localhost:8081/html.html" name="root" data-type="view"><span>首页</span></button>
+    <div name="root" data-type="parent"><span>商城</span>
+        <button name="sub" data-type="view" data-url="http://localhost:8081/login"><span>门票中心</span></button>
+        <button name="sub" data-type="view" data-url="http://localhost:8081/login"><span>网络商城</span></button>
+    </div>
+    <div name="root" data-type="parent"><span>个人中心</span>
+        <button name="sub" data-type="view" data-url="http://localhost:8081/login"><span>密码修改</span></button>
+        <button name="sub" data-type="view" data-url="http://localhost:8081/login"><span>个人中心</span></button>
+        <button name="sub" data-type="view" data-url="http://localhost:8081/login"><span>地址管理</span></button>
+    </div>
+</div>
+
+<div id="editBook">
+    <div id="edit">
+        <div id="value">
+            <div>
+                <label for="menuLevel">菜单等级:</label>
+                <select id="menuLevel" name="menuLevel">
+                    <option value="">请选择</option>
+                    <option value="root">根菜单</option>
+                    <option value="sub">子菜单</option>
+                </select>
+            </div>
+            <div class="menuWhere">
+                <label for="menuWhere" class="sub">父级菜单:</label>
+                <select id="menuWhere" name="menuWhere">
+                    <option value="">请选择</option>
+                </select>
+            </div>
+            <div>
+                <label for="menuName">菜单名称:</label>
+                <input id="menuName" name="menuName">
+            </div>
+            <div>
+                <label for="menuType">菜单类型:</label>
+                <select id="menuType" name="menuType">
+                    <option value="view" selected>url链接菜单</option>
+                    <option value="parent" class="rootShow">微信扩展菜单</option>
+                    <!--<option value="">关键词回复菜单</option>-->
+                    <!--<option value="">一键拨号菜单</option>-->
+                    <!--<option value="">一键导航</option>-->
+                </select>
+            </div>
+            <hr/>
+            <!--url功能界面-->
+            <div id="view" class="ct-selected">
+                <div>
+                    <label for="url">跳转地址:</label>
+                    <input id="url" name="url">
+                </div>
+                <div>
+                    <label for="transform">是否登录微信:</label>
+                    <input name="transform" type="radio" value="true" checked="checked">是
+                    <input name="transform" type="radio" value="false">否
+                </div>
+            </div>
+        </div>
+        <button id="save">保存</button>
+    </div>
+</div>
+<div>
+    <button id="push"><span>生成微信菜单</span></button>
+    <button id="get"><span>获取微信菜单</span></button>
+</div>
+</body>
+</html>

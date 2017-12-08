@@ -12,6 +12,7 @@
         <module>OverrideBlog-user</module>
         <module>OverrideBlog-article</module>
         <module>OverrideBlog-messagePush</module>
+        <module>OverrideBlog-wechat</module>
     </modules>
     <name>${project.artifactId}</name>
     <url>http://maven.apache.org</url>
