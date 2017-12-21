@@ -1,0 +1,14 @@
+server:
+  port: 9999
+  context-path: /user #设置项目path
+
+#数据库监控配置
+management:
+  health:
+    db:
+      enabled: true
+    defaults:
+      enabled: true
+
+
+

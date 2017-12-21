@@ -1,0 +1,12 @@
+spring:
+  profiles:
+    active: dev
+
+  #设置编码
+  http:
+    encoding:
+      charset: utf-8
+      force: false
+  session:
+    store-type: none
+

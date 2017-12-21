@@ -1,15 +1,13 @@
 <%@page pageEncoding="utf-8" language="java" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-<c:set var="ctx" value="${pageContext.request.contextPath}" />
+<%@ include file="../../../common/taglib.jspf"%>
 <!DOCTYPE html>
 <html lang="zh-cn">
 <head>
     <meta charset="UTF-8">
     <title>分享博客生活</title>
     <meta name="description" content="博客开发ing">
-    <link rel="stylesheet" type="text/css" href="static/css/style.css" />
-    <link rel="stylesheet" type="text/css" href="static/css/H-ui.css" />
+    <link rel="stylesheet" type="text/css" href="${ctx}/static/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="${ctx}/static/css/H-ui.css" />
 </head>
 <body>
 <div class="topnav">
@@ -80,7 +78,7 @@
 <script>
     var ctx = "${ctx}";
     function goRegister(){
-        window.location.href = "view/jsp/user/register.jsp";
+        window.location.href = ctx + "/view/jsp/user/register.jsp";
     }
 </script>
 </body>
