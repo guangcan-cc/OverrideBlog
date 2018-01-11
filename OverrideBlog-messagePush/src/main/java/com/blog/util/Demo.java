@@ -61,10 +61,10 @@ public class Demo {
      */
     public static void demoXingeSimple() {
         // 易用接口
-        System.out.println(XingeApp.pushTokenAndroid(000, "secretKey", "test", "测试", "token"));
-        System.out.println(XingeApp.pushAccountAndroid(000, "secretKey", "test", "测试", "account"));
-        System.out.println(XingeApp.pushAllAndroid(000, "secretKey", "test", "测试"));
-        System.out.println(XingeApp.pushTagAndroid(000, "secretKey", "test", "测试", "tag"));
+        System.out.println(XingeApp.pushTokenAndroid(000, "secretKey", "article", "测试", "token"));
+        System.out.println(XingeApp.pushAccountAndroid(000, "secretKey", "article", "测试", "account"));
+        System.out.println(XingeApp.pushAllAndroid(000, "secretKey", "article", "测试"));
+        System.out.println(XingeApp.pushTagAndroid(000, "secretKey", "article", "测试", "tag"));
 
         System.out.println(XingeApp.pushTokenIos(000L, "secretKey", "测试", "token", XingeApp.IOSENV_DEV));
         System.out.println(XingeApp.pushAccountIos(000L, "secretKey", "测试", "account", XingeApp.IOSENV_DEV));
@@ -146,7 +146,7 @@ public class Demo {
     protected JSONObject demoPushSingleAccountIOS() {
         MessageIOS message = new MessageIOS();
         message.setExpireTime(86400);
-        message.setAlert("ios test");
+        message.setAlert("ios article");
         message.setBadge(1);
         message.setSound("beep.wav");
         TimeInterval acceptTime1 = new TimeInterval(0, 0, 23, 59);
@@ -362,7 +362,7 @@ public class Demo {
         messageIOS = new MessageIOS();
         messageIOS.setType(MessageIOS.TYPE_APNS_NOTIFICATION);
         messageIOS.setExpireTime(86400);
-        messageIOS.setAlert("ios test");
+        messageIOS.setAlert("ios article");
         messageIOS.setBadge(1);
         messageIOS.setCategory("INVITE_CATEGORY");
         messageIOS.setSound("beep.wav");

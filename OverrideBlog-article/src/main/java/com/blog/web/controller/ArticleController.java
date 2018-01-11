@@ -22,7 +22,7 @@ public class ArticleController {
 
     @RequestMapping(value = "/test", method = RequestMethod.GET)
     public Object test() {
-        return "article/test#GET";
+        return "article/article#GET";
     }
 
     @RequestMapping(value = "/article/{id}", method = RequestMethod.GET)

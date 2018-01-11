@@ -55,8 +55,8 @@
 
 </div>
 
-<script src="${ctx}/js/common.js" type="application/javascript"></script>
-<script src="${ctx}/js/jquery-1.11.3.min.js" type="application/javascript"></script>
+<script src="${ctx}/static/js/common.js" type="text/javascript"></script>
+<script src="${ctx}/static/js/jquery/jquery-1.11.3.min.js" type="text/javascript"></script>
 <script>
     function register() {
         if(isBlank($('[name="username"]').val())) {

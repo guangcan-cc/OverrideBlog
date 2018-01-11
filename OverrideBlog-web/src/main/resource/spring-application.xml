@@ -10,5 +10,6 @@
     </context:component-scan>
 
     <import resource="classpath:spring-dao.xml"/>
+    <import resource="classpath:spring-redis.xml"/>
 
 </beans>
