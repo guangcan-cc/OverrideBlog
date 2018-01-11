@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.blog.mapper.UserMapper">
+
+    <resultMap id="userMap" type="TbUserPO">
+        <id column="id" property="id"/>
+        <result column="username" property="username" />
+        <result column="password" property="password" />
+        <result column="name" property="name" />
+        <result column="create_time" property="createTime" />
+        <result column="email" property="email" />
+        <result column="phone_number" property="phoneNumber" />
+        <result column="ext" property="ext" />
+    </resultMap>
+    
+    <select id="findUserInfoVOById" resultType="UserInfoVO">
+        select * from tb_user where id = #{id}
+    </select>
+
+    <insert id="insertUserInfoVO" parameterType="UserInfoVO" useGeneratedKeys="true" keyProperty="id">
+        INSERT INTO tb_user (username,password,name,create_time,email,phone_number)
+        VALUES (#{username},#{password},#{name},#{createTime},#{email},#{phoneNumber})
+    </insert>
+</mapper>

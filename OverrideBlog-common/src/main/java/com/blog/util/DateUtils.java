@@ -1,7 +1,7 @@
 /******************************************************************************
  * CREATETIME : 2014年6月26日 下午8:06:14
  ******************************************************************************/
-package com.blog.utils;
+package com.blog.util;
 
 import java.text.DateFormat;
 import java.text.ParseException;

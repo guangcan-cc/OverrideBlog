@@ -1,6 +1,4 @@
-package com.blog.dao;
-
-import org.springframework.stereotype.Repository;
+package com.blog.mapper;
 
 /**
  * Created by keyez on 2017/11/29.

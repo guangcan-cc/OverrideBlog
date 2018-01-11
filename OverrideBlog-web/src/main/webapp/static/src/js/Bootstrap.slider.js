@@ -43,7 +43,7 @@ function($) {
 	// Reference to Slider constructor
 	var Slider; (function($) {
 		'use strict';
-		// -------------------------- utils -------------------------- //
+		// -------------------------- util -------------------------- //
 		var slice = Array.prototype.slice;
 		function noop() {}
 		// -------------------------- definition -------------------------- //

@@ -1,4 +1,4 @@
-package com.blog.utils;
+package com.blog.util;
 
 /**
  * Created by Elvis on 2017/9/20.

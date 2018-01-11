@@ -1,23 +1,31 @@
 package com.blog.exception;
 
-public class NonePrintException extends Exception{
+/**
+ * Created by Elvis on 2017/8/30.
+ */
+public class NonePrintException extends BaseException{
 
-    public NonePrintException() {
+    public NonePrintException(String code, String msg) {
+        super(code, msg);
     }
 
-    public NonePrintException(String message) {
-        super(message);
+    public NonePrintException(String code, String msg, String bussinessMsg) {
+        super(code, msg, bussinessMsg);
     }
 
-    public NonePrintException(String message, Throwable cause) {
-        super(message, cause);
+    public NonePrintException(int code, String msg) {
+        super(code, msg);
     }
 
-    public NonePrintException(Throwable cause) {
-        super(cause);
+    public NonePrintException(int code, String msg, String bussinessMsg) {
+        super(code, msg, bussinessMsg);
     }
 
-    public NonePrintException(String message, Throwable cause, boolean enableSuppression, boolean writableStackTrace) {
-        super(message, cause, enableSuppression, writableStackTrace);
+    public NonePrintException(String code, String msg, Throwable exception) {
+        super(code, msg, exception);
+    }
+
+    public NonePrintException(String code, String msg, String bussinessMsg, Throwable exception) {
+        super(code, msg, bussinessMsg, exception);
     }
 }

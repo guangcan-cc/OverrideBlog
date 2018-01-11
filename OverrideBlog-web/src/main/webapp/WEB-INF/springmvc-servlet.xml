@@ -9,4 +9,10 @@
         <context:include-filter type="annotation" expression="org.springframework.web.bind.annotation.RestController"/>
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
     </context:component-scan>
+
+    <!--视图解析器  -->
+    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="prefix" value="/view/"/>
+        <property name="suffix" value=".jsp"/>
+    </bean>
 </beans>

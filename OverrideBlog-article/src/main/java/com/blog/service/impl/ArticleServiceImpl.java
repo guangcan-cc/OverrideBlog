@@ -1,6 +1,6 @@
 package com.blog.service.impl;
 
-import com.blog.dao.IArticleDao;
+import com.blog.mapper.IArticleDao;
 import com.blog.service.IArticleService;
 import org.springframework.stereotype.Service;
 

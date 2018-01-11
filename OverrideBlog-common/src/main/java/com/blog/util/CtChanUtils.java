@@ -1,6 +1,4 @@
-package com.blog.utils;
-
-import java.lang.reflect.Executable;
+package com.blog.util;
 
 /**
  * Created by Elvis on 2017/8/30.

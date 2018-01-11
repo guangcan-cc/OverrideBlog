@@ -1,10 +1,10 @@
-package com.blog.utils;
+package com.blog.util;
 
 /**
  * Created by Elvis on 2017/8/31.
  */
 public enum ErrorCodeDesc {
-    SYSTEM_ERROR("-1","系统出现异常，请稍后再试！");
+    USER_NOT_EXIST("1001","用户名已存在！");
 
 
     private String code;

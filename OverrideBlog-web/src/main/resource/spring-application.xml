@@ -9,4 +9,6 @@
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Service"/>
     </context:component-scan>
 
+    <import resource="classpath:spring-dao.xml"/>
+
 </beans>

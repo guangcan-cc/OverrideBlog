@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="static/css/H-ui.css" />
 </head>
 <body>
-<div class="topnav">
+<div class="topnav" style="padding-left: 88px;padding-right: 88px;">
     <div class="wp cl">
         <div class="l">您好，欢迎来到Override Blog！</div>
         <div class="r">

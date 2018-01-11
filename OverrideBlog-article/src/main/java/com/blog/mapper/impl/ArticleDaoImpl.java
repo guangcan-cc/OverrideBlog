@@ -1,6 +1,6 @@
-package com.blog.dao.impl;
+package com.blog.mapper.impl;
 
-import com.blog.dao.IArticleDao;
+import com.blog.mapper.IArticleDao;
 import org.springframework.stereotype.Repository;
 
 /**

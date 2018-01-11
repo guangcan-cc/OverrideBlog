@@ -4,7 +4,7 @@ import java.util.Date;
 
 public class TbUserPO {
 
-    private int id;
+    private Long id;
     private String username;
     private String password;
     private String name;
@@ -13,11 +13,11 @@ public class TbUserPO {
     private String phoneNumber;
     private String ext;
 
-    public int getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -75,5 +75,19 @@ public class TbUserPO {
 
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
+    }
+
+    @Override
+    public String toString() {
+        return "TbUserPO{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", name='" + name + '\'' +
+                ", createTime=" + createTime +
+                ", email='" + email + '\'' +
+                ", phoneNumber='" + phoneNumber + '\'' +
+                ", ext='" + ext + '\'' +
+                '}';
     }
 }

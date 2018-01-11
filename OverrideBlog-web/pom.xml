@@ -19,12 +19,6 @@
 
         <dependency>
             <groupId>com.blog</groupId>
-            <artifactId>OverrideBlog-common</artifactId>
-            <version>${parent.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>com.blog</groupId>
             <artifactId>OverrideBlog-user</artifactId>
             <version>${parent.version}</version>
         </dependency>

@@ -1,4 +1,4 @@
-package com.blog.utils;
+package com.blog.util;
 
 import java.util.Collection;
 
