@@ -47,8 +47,14 @@
             </div>
         </div>
         <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-3">人物头像：</label>
+            <div class="formControls col-xs-8 col-sm-9">
+                <input type="file" name="uploadHeadFile"/>
+            </div>
+        </div>
+        <div class="row cl">
             <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-3">
-                <button class="btn btn-primary radius" onclick="register();">注册</button>
+                <button class="btn btn-primary radius" type="button" onclick="register();">注册</button>
             </div>
         </div>
     </form>
@@ -71,11 +77,22 @@
             return;
         }
 
+        if($('[name="uploadHeadFile"]')[0].files[0].size > 1024 * 1024 * 4) {
+            alert("图片大小不超过4M");
+            return;
+        }
+
+        var data = new FormData($('#form')[0]);
+
         $.ajax({
             url : '${ctx}/register',
             type : 'post',
-            data : $('#form').serialize(),
+            data : data,
             dataType : 'json',
+            async: false,
+            cache: false,
+            contentType : false,
+            processData: false,
             success : function (result) {
                 if(result.code == 0){
                     alert("注册成功");
@@ -87,8 +104,6 @@
                 alert("网络错误");
             }
         });
-
-
 
     }
 </script>

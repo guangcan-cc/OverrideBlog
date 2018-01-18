@@ -1,6 +1,27 @@
 server:
-  port: 9999
-  context-path: /user #设置项目path
+  port: 7021
+  context-path: /hello #设置项目path
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/demo?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8
+    username: root
+    password: 8023
+  redis:
+    host: 120.79.44.158
+    port: 6379
+    database: 1
+    pool:
+      max-active: 8
+      max-idle: 500
+      max-wait: -1
+      min-idle: 0
+    timeout: 0
+  mvc:
+    view:
+      prefix: /jsp/
+      suffix: .jsp
 
 #数据库监控配置
 management:
@@ -10,5 +31,9 @@ management:
     defaults:
       enabled: true
 
+# MyBatis配置
+mybatis:
+  mapper-locations: classpath:com/blog/mapper/*.xml
+  type-aliases-package: com.blog.po,com.blog.vo
 
 

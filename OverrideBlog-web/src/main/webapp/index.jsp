@@ -8,15 +8,16 @@
     <meta charset="UTF-8">
     <title>分享博客生活</title>
     <meta name="description" content="博客开发ing">
+    <meta name=”viewport” content=”width=device-width, initial-scale=1, maximum-scale=1″>
     <link rel="stylesheet" type="text/css" href="static/css/style.css" />
     <link rel="stylesheet" type="text/css" href="static/css/H-ui.css" />
 </head>
 <body>
-<div class="topnav" style="padding-left: 88px;padding-right: 88px;">
+<div class="topnav" style="padding-left:88px; padding-right: 88px;">
     <div class="wp cl">
         <div class="l">您好，欢迎来到Override Blog！</div>
         <div class="r">
-            <span class="r_nav">[ <a rel="nofollow" href="javascript:login();">登录</a> ]</span>
+            <span class="r_nav">[ <a rel="nofollow" href="javascript:void(0);" onclick="goLogin();">登录</a> ]</span>
             <span class="pipe">|</span>
             <span class="r_nav">[ <a href="javascript:goRegister();">注册</a> ]</span>
             <span class="pipe">|</span><span class="r_nav"><a title="收藏本站" href="javascript:;" onClick="addFavoritepage('H-ui前端框架','http://www.h-ui.net/');">收藏本站</a></span>
@@ -45,19 +46,30 @@
         </div>
     </header>
 
-    <div class="text-c">
+
+    <div>
+        <span class="text-c" style="background-color: yellow;width: 100px;">
+            文章一
+        </span>
+        <span class="text-c" style="background-color: red;width: 100px;">
+            文章一
+        </span>
+    </div>
+
+    <div class="text-c" style="background-color: yellow;width: 100px;display: block;">
         文章一
     </div>
-    <div class="text-c">
+    <div class="text-c" style="background: red;width: 100px;display: inline-block;">
         文章一
     </div>
+
     <div class="text-c">
-        文章一
-    </div>
-    <div class="text-c">
-        文章一
-    </div>
-    <div class="text-c">
+
+        <label for="name">
+            dsadsa
+            dsada
+            <input type="text" name="name" id="name"/>
+        </label>
         文章一
     </div>
     <div class="text-c">
@@ -75,12 +87,43 @@
     <div class="text-c">
         1 2 3 4 5 6 7 8 9 10
     </div>
-
 </div>
+
+<div class="login_div" style="display: none;">
+    <span style="float: right;">X</span>
+    <div style="margin: 40px;">
+        <form>
+            <div>
+                <label>
+                    <span style="width: 20%">用户名</span>
+                    <input type="text" name="username"/>
+                </label>
+            </div>
+            <div>
+                <label>
+                    <span style="width: 20%">密码</span>
+                    <input type="text" name="password"/>
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="button" value="登录"/>
+                </label>
+            </div>
+        </form>
+    </div>
+</div>
+
+<script type="text/javascript" src="static/js/jquery/jquery-1.11.3.min.js"></script>
 <script>
     var ctx = "${ctx}";
     function goRegister(){
         window.location.href = "view/jsp/user/register.jsp";
+    }
+
+    function goLogin() {
+        $('.login_div').show();
+        $('body').addClass('hyaline');
     }
 </script>
 </body>

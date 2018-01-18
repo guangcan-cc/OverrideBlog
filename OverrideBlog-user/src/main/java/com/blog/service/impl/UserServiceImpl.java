@@ -6,9 +6,11 @@ import com.blog.service.IUserService;
 import com.blog.util.ErrorCodeDesc;
 import com.blog.vo.UserInfoVO;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
 import org.springframework.stereotype.Service;
 
 @Service
+@Scope("prototype")
 public class UserServiceImpl implements IUserService {
 
     private final UserMapper userMapper;
